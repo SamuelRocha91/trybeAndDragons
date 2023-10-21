@@ -1,7 +1,7 @@
-import Archetype, { Mage } from './Archetypes';
+import Archetype, { Mage, Necromancer, Ranger, Warrior } from './Archetypes';
 import Energy from './Energy';
 import Fighter, { SimpleFighter } from './Fighter';
-import Race, { Elf } from './Races';
+import Race, { Dwarf, Elf, Halfling, Orc } from './Races';
 import getRandomInt from './utils';
 
 export default class Character implements Fighter {
@@ -14,21 +14,45 @@ export default class Character implements Fighter {
   private _dexterity: number;
   readonly _energy: Energy;
   private _name: string;
-  constructor(name: string) {
+  constructor(name: string, nameRace?: string, nameArchetype?: string) {
     this._name = name;
     this._dexterity = Math.round(Math.random() * 10) + 1;
-    const Elfo: Race = new Elf(name, this._dexterity);
-    const mago = new Mage(name);
-    this._race = Elfo;
-    this._archetype = mago;
-    this._maxLifePoints = Elfo.maxLifePoints / 2;
-    this._lifePoints = Elfo.maxLifePoints;
+    this._race = Character.defineRace(nameRace || 'Elf', name, this._dexterity);
+    this._archetype = Character.defineArchetype(nameArchetype || 'Mage', name);
+    this._maxLifePoints = this._race.maxLifePoints / 2;
+    this._lifePoints = this._race.maxLifePoints;
     this._defense = getRandomInt(1, 10);
     this._strength = getRandomInt(1, 10);
     this._energy = {
-      type_: mago.energyType,
+      type_: this._archetype.energyType,
       amount: getRandomInt(0, 10),
     };
+  }
+
+  static defineRace(race: string, name: string, dexterity: number): Race {
+    if (race === 'Dwarf') {
+      return new Dwarf(name, dexterity);
+    } 
+    if (race === 'Halfling') {
+      return new Halfling(name, dexterity);
+    } 
+    if (race === 'Orc') {
+      return new Orc(name, dexterity);
+    }
+    return new Elf(name, dexterity);
+  }
+
+  static defineArchetype(archetype: string, name: string): Archetype {
+    if (archetype === 'Necromancer') {
+      return new Necromancer(name);
+    } 
+    if (archetype === 'Ranger') {
+      return new Ranger(name);
+    } 
+    if (archetype === 'Warrior') {
+      return new Warrior(name);
+    }
+    return new Mage(name);
   }
 
   get race(): Race {
