@@ -1,10 +1,9 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h1>Projeto Trybers and Dragons</h1>
+<p>Trata-se de um projeto avaliativo desenvolvido no módulo de BackEnd do curso de Desenvolvimento Web da Trybe. Destacam-se como competências desenvolvidas: </p>
+ <ol>
+  <li>Programação orienta da objetos(POO);</li>
+  <li>Typescript;</li>
+  <li>Princípios SOLID;</li>
+</ol>
+<p>A aplicação consiste num jogo de RPG com uma diversidade de características para personagens(interfaces e classes) e de modos de disputa. </p>
+
