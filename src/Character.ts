@@ -86,6 +86,10 @@ export default class Character implements Fighter {
       ...energy,
     };
   }
+  
+  get name(): string {
+    return this._name;
+  }
 
   receiveDamage(attackPoints: number): number {
     const damage = attackPoints - this._defense;
@@ -117,7 +121,7 @@ export default class Character implements Fighter {
 
   printCharacterInfo(): string {
     // eslint-disable-next-line max-len
-    return `${this._name} é um ${this._archetype.name} da raça ${this._race.name}:
+    return `    ${this._name} é um ${this._archetype.name} da raça ${this._race.name}.
     Possui ${this._lifePoints} de vida e ${this._strength} de força`;
   }
 }

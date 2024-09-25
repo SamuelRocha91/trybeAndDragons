@@ -5,7 +5,8 @@ export default interface Fighter {
   lifePoints: number;
   strength : number;
   defense: number;
-  energy?: Energy
+  energy?: Energy;
+  name?: string;
   attack(enemy: Fighter | SimpleFighter): void;
   special?(enemy: Fighter | SimpleFighter): void;
   levelUp(): void;
