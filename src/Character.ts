@@ -18,7 +18,7 @@ export default class Character implements Fighter {
   constructor(name: string, nameRace?: string, nameArchetype?: string) {
     this._name = name;
     this._dexterity = Math.round(Math.random() * 10) + 1;
-    this._race = Character.defineRace(nameRace || 'Elf', name, this._dexterity);
+    this._race = Character.defineRace(nameRace || 'Elf', this._dexterity);
     this._archetype = Character.defineArchetype(nameArchetype || 'Mage', name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._race.maxLifePoints;
@@ -30,17 +30,17 @@ export default class Character implements Fighter {
     };
   }
 
-  static defineRace(race: string, name: string, dexterity: number): Race {
+  static defineRace(race: string, dexterity: number): Race {
     if (race === 'Dwarf') {
-      return new Dwarf(name, dexterity);
+      return new Dwarf(dexterity);
     } 
     if (race === 'Halfling') {
-      return new Halfling(name, dexterity);
+      return new Halfling(dexterity);
     } 
     if (race === 'Orc') {
-      return new Orc(name, dexterity);
+      return new Orc(dexterity);
     }
-    return new Elf();
+    return new Elf(dexterity);
   }
 
   static defineArchetype(archetype: string, name: string): Archetype {
