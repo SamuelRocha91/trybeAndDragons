@@ -14,11 +14,12 @@ export default class Character implements Fighter {
   private _dexterity: number;
   readonly _energy: Energy;
   private _name: string;
+
   constructor(name: string, nameRace?: string, nameArchetype?: string) {
     this._name = name;
     this._dexterity = Math.round(Math.random() * 10) + 1;
-    this._race = Character.defineRace(nameRace || 'Elf', name, this._dexterity);
-    this._archetype = Character.defineArchetype(nameArchetype || 'Mage', name);
+    this._race = Character.defineRace(nameRace || 'Elf', this._dexterity);
+    this._archetype = Character.defineArchetype(nameArchetype || 'Mage');
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._race.maxLifePoints;
     this._defense = getRandomInt(1, 10);
@@ -29,30 +30,30 @@ export default class Character implements Fighter {
     };
   }
 
-  static defineRace(race: string, name: string, dexterity: number): Race {
+  static defineRace(race: string, dexterity: number): Race {
     if (race === 'Dwarf') {
-      return new Dwarf(name, dexterity);
+      return new Dwarf(dexterity);
     } 
     if (race === 'Halfling') {
-      return new Halfling(name, dexterity);
+      return new Halfling(dexterity);
     } 
     if (race === 'Orc') {
-      return new Orc(name, dexterity);
+      return new Orc(dexterity);
     }
-    return new Elf(name, dexterity);
+    return new Elf(dexterity);
   }
 
-  static defineArchetype(archetype: string, name: string): Archetype {
+  static defineArchetype(archetype: string): Archetype {
     if (archetype === 'Necromancer') {
-      return new Necromancer(name);
+      return new Necromancer();
     } 
     if (archetype === 'Ranger') {
-      return new Ranger(name);
+      return new Ranger();
     } 
     if (archetype === 'Warrior') {
-      return new Warrior(name);
+      return new Warrior();
     }
-    return new Mage(name);
+    return new Mage();
   }
 
   get race(): Race {
@@ -85,6 +86,10 @@ export default class Character implements Fighter {
       ...energy,
     };
   }
+  
+  get name(): string {
+    return this._name;
+  }
 
   receiveDamage(attackPoints: number): number {
     const damage = attackPoints - this._defense;
@@ -112,5 +117,11 @@ export default class Character implements Fighter {
     if (this._lifePoints > this._race.maxLifePoints) {
       this._lifePoints = this._race.maxLifePoints;
     }
+  }
+
+  printCharacterInfo(): string {
+    // eslint-disable-next-line max-len
+    return `    ${this._name} é um ${this._archetype.name} da raça ${this._race.name}.
+    Possui ${this._lifePoints} de vida e ${this._strength} de força`;
   }
 }

@@ -3,17 +3,13 @@ import Race from './Race';
 export default class Halfling extends Race {
   lifePoints: number;
   constructor(
-    readonly _name: string,
     readonly _dexterity: number,
   ) {
-    super('Halfling', 60);
+    super('Halfling', _dexterity);
     this.lifePoints = 60;
+    Halfling.createdRacesInstances();
   }
-  
-  get name() { return this._name; }
-  
-  get dexterity() { return this._dexterity; }
-  
+
   get maxLifePoints(): number {
     return this.lifePoints;
   }

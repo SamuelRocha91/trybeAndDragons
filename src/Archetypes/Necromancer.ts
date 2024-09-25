@@ -3,15 +3,14 @@ import Archetype from './Archetype';
 
 class Necromancer extends Archetype {
   private _energyType: EnergyType;
-  constructor(name: string) {
-    super(name);
+  constructor() {
+    super('Necromancer');
     this._energyType = 'mana';
+    Necromancer.createdArchetypeInstances();
   }
 
-  get name(): string { return this._name; } 
-  get special(): number { return this._special; }
-  get cost(): number { return this._cost; }
   private static numberArchetypeInstances = 0;
+  
   static createdArchetypeInstances(): number {
     Necromancer.numberArchetypeInstances += 1;
     const instances = Necromancer.numberArchetypeInstances;
