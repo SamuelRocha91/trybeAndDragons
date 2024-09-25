@@ -14,6 +14,7 @@ export default class Character implements Fighter {
   private _dexterity: number;
   readonly _energy: Energy;
   private _name: string;
+
   constructor(name: string, nameRace?: string, nameArchetype?: string) {
     this._name = name;
     this._dexterity = Math.round(Math.random() * 10) + 1;
@@ -39,7 +40,7 @@ export default class Character implements Fighter {
     if (race === 'Orc') {
       return new Orc(name, dexterity);
     }
-    return new Elf(name, dexterity);
+    return new Elf();
   }
 
   static defineArchetype(archetype: string, name: string): Archetype {
@@ -112,5 +113,11 @@ export default class Character implements Fighter {
     if (this._lifePoints > this._race.maxLifePoints) {
       this._lifePoints = this._race.maxLifePoints;
     }
+  }
+
+  printCharacterInfo(): string {
+    // eslint-disable-next-line max-len
+    return `${this._name} é um ${this._archetype.name} da raça ${this._race}:
+    Possui ${this._lifePoints} de vida e ${this._strength} de força`;
   }
 }

@@ -3,16 +3,11 @@ import Race from './Race';
 class Elf extends Race {
   lifePoints: number;
   constructor(
-    readonly _name: string,
     readonly _dexterity: number,
   ) {
-    super('Elf', 99);
+    super('Elf', _dexterity);
     this.lifePoints = 99;
   }
-  
-  get name() { return this._name; }
-  
-  get dexterity() { return this._dexterity; }
   
   get maxLifePoints(): number {
     return this.lifePoints;
