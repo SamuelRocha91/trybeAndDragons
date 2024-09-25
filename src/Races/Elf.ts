@@ -7,6 +7,7 @@ class Elf extends Race {
   ) {
     super('Elf', _dexterity);
     this.lifePoints = 99;
+    Elf.createdRacesInstances();
   }
   
   get maxLifePoints(): number {

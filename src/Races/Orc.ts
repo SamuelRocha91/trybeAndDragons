@@ -7,6 +7,7 @@ export default class Orc extends Race {
   ) {
     super('Orc', _dexterity);
     this.lifePoints = 74;
+    Orc.createdRacesInstances();
   }
   
   get maxLifePoints(): number {

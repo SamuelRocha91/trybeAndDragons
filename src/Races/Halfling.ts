@@ -7,6 +7,7 @@ export default class Halfling extends Race {
   ) {
     super('Halfling', _dexterity);
     this.lifePoints = 60;
+    Halfling.createdRacesInstances();
   }
 
   get maxLifePoints(): number {

@@ -10,6 +10,7 @@ class Mage extends Archetype {
   }
 
   private static numberArchetypeInstances = 0;
+  
   static createdArchetypeInstances(): number {
     Mage.numberArchetypeInstances += 1;
     const instances = Mage.numberArchetypeInstances;

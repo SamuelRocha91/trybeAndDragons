@@ -10,6 +10,7 @@ class Necromancer extends Archetype {
   }
 
   private static numberArchetypeInstances = 0;
+  
   static createdArchetypeInstances(): number {
     Necromancer.numberArchetypeInstances += 1;
     const instances = Necromancer.numberArchetypeInstances;
