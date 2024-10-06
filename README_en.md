@@ -53,7 +53,7 @@
   1. Clone the repository:
 
      ```bash
-     git clone <REPOSITORY_URL>
+     git clone git@github.com:SamuelRocha91/trybeAndDragons.git
      cd trybers-and-dragons
      ```
 
