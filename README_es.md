@@ -1,81 +1,99 @@
-# <img src="https://agenciars.com.br/wp-content/uploads/2022/06/Trybe.png" alt="Trybe Logo" width="52" height="30" /> Trybers y Dragones
-<img src="https://agenciars.com.br/wp-content/uploads/2022/06/Trybe.png" alt="Trybe Logo" width="52" height="30" />
+# <img src="https://cdn-icons-png.flaticon.com/128/5968/5968322.png" alt="Node Logo" width="52" height="30" /> Proyecto Trybers and dragons <img src="https://cdn-icons-png.flaticon.com/128/5968/5968322.png" alt="Node Logo" width="52" height="30" />
 
 ## 🌐 [![Português](https://img.shields.io/badge/Português-green)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README.md) [![Español](https://img.shields.io/badge/Español-yellow)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README_es.md) [![English](https://img.shields.io/badge/English-blue)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README_en.md) [![Русский](https://img.shields.io/badge/Русский-lightgrey)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README_ru.md) [![中文](https://img.shields.io/badge/中文-red)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README_ch.md) [![العربية](https://img.shields.io/badge/العربية-orange)](https://github.com/SamuelRocha91/trybeAndDragons/blob/main/README_ar.md)
 
-![Vista de la Aplicación](./assets/picture.png)
-![Vista de la Aplicación](./assets/pictureTwo.png)
+![Vista previa de la aplicación](./assets/picture.png)
+![Vista previa de la aplicación](./assets/pictureTwo.png)
 
-## Descripción
+<details>
+  <summary><h2>📝 Descripción</h2></summary>
 
-**Trybers y Dragones** es una aplicación RPG donde los usuarios pueden crear personajes con varias razas y arquetipos, y generar emocionantes enfrentamientos entre personajes, ya sea en modos Jugador vs. Entorno (PvE) o Jugador vs. Jugador (PvP). Al manipular el archivo `index.ts` y la función `runBattles`, los jugadores pueden crear y desafiar a otros personajes en épicas batallas.
+  **Trybers and Dragons** es una aplicación de RPG donde los usuarios pueden crear personajes con diversas razas y arquetipos, y generar emocionantes confrontaciones entre personajes, ya sea en modos Jugador contra Entorno (PvE) o Jugador contra Jugador (PvP). Al manipular el archivo `index.ts` y la función `runBattles`, los jugadores pueden crear y desafiar a otros personajes en batallas épicas.
 
-## Características
+</details>
 
-- **Creación de Personajes**: Elige entre varias razas (como Elfos, Humanos, etc.) y arquetipos para construir tu personaje único.
-- **Modos de Conflicto**: Participa en batallas PvE contra criaturas controladas por el sistema o enfréntate a otros jugadores en batallas PvP.
-- **Desafíos Personalizados**: Manipula el archivo `index.ts` para ajustar la lógica del juego y la función `runBattles` para crear desafíos personalizados.
+<details>
+  <summary><h2>✨ Características</h2></summary>
 
-## Tecnologías Utilizadas
+  - **Creación de Personajes**: Elige entre varias razas (como Elfos, Humanos, etc.) y arquetipos para construir tu personaje único.
+  - **Modos de Conflicto**: Conduce batallas PvE contra criaturas controladas por el sistema o enfréntate a otros jugadores en batallas PvP.
+  - **Desafíos Personalizados**: Manipula el archivo `index.ts` para ajustar la lógica del juego y la función `runBattles` para generar desafíos personalizados.
 
-- **TypeScript**: Para asegurar tipado estático y mejorar la mantenibilidad del código.
-- **Programación Orientada a Objetos**: Estructura del código basada en principios de programación orientada a objetos, facilitando la creación y extensión de clases.
-- **Docker**: Usado para crear un entorno de desarrollo aislado y reproducible.
+</details>
 
-## Conceptos Clave Cubiertos
+<details>
+  <summary><h2>🛠️ Tecnologías Utilizadas</h2></summary>
 
-- Programación orientada a objetos;
-- Principios SOLID;
+  - **TypeScript**: Para garantizar tipado estático y mejorar el mantenimiento del código.
+  - **Programación Orientada a Objetos**: Estructura del código basada en principios de programación orientada a objetos, facilitando la creación y extensión de clases.
+  - **Docker**: Utilizado para crear un entorno de desarrollo aislado y reproducible.
 
-## Requisitos Previos
+</details>
 
-- Node.js (versión recomendada: 16 o 18)
-- NPM (generalmente instalado con Node.js)
-- Docker (opcional pero recomendado para entornos de desarrollo)
+<details>
+  <summary><h2>📚 Conceptos Clave Trabajados</h2></summary>
 
-## Instalación
+  - Programación orientada a objetos;
+  - SOLID;
 
-1. Clona el repositorio:
+</details>
 
-   ```bash
-   git clone <REPOSITORY_URL>
-   cd trybers-y-dragones
-   ```
+<details>
+  <summary><h2>⚙️ Requisitos Previos</h2></summary>
 
-2. Instala las dependencias:
+  - Node.js (versión recomendada: 16 o 18)
+  - NPM (generalmente instalado junto con Node.js)
+  - Docker (opcional, pero recomendado para entornos de desarrollo)
 
-   ```bash
-   npm install
-   ```
+</details>
 
-3. Para ejecutar la aplicación, utiliza el comando:
+<details>
+  <summary><h2>🚀 Instalación</h2></summary>
 
-   ```bash
-   npm start
-   ```
+  1. Clona el repositorio:
 
-   Esto iniciará la aplicación y ejecutará el archivo `index.ts`.
+     ```bash
+     git clone <URL_DEL_REPOSITORIO>
+     cd trybers-and-dragons
+     ```
 
-## Cómo Manipular el Juego
+  2. Instala las dependencias:
 
-1. **Modificar el Archivo `index.ts`**: 
-   - Este archivo es el punto de entrada de la aplicación. Puedes agregar nuevas características o alterar las existentes.
-   - La función `runBattles` es responsable de gestionar los enfrentamientos. ¡Siéntete libre de adaptarla a tus necesidades!
+     ```bash
+     npm install
+     ```
 
-2. **Creación de Personajes**:
-   - Usa las clases disponibles para crear personajes con diferentes rasgos.
-   - Explora las opciones de raza y arquetipo para personalizar tu personaje.
+  3. Para ejecutar la aplicación, utiliza el comando:
 
-3. **Desafíos**:
-   - Prueba las batallas PvE y PvP, ajustando los parámetros en la función `runBattles` para crear diferentes escenarios de combate.
+     ```bash
+     npm start
+     ```
 
-## Otros Proyectos
+     Esto iniciará la aplicación y ejecutará el archivo `index.ts`.
 
-- ⚽ [API de Fútbol en TypeScript](https://github.com/SamuelRocha91/trybeFutebolClube/blob/main/README_es.md)
-- 🌶️ [Aplicación de Recetas](https://github.com/SamuelRocha91/ProjectRecipesApp/blob/main/README_es.md)
-- 🐣 [Pokedex](https://github.com/SamuelRocha91/pokedex/blob/main/README_es.md)
-- 🏪 [Tienda Online FrontEnd](https://github.com/SamuelRocha91/project-frontend-online-store/blob/main/README_es.md)
-- 👛 [Organizador de Gastos](https://github.com/SamuelRocha91/project-trybewallet/blob/main/README_es.md)
-- 🎮 [Trivia](https://github.com/SamuelRocha91/trivia_game/blob/main/README_es.md)
-- 🗡️ [Trybe Smith](https://github.com/SamuelRocha91/TrybeSmith/blob/main/README_es.md)
-- 🪧 [API de Blogs](https://github.com/SamuelRocha91/BlogsApi/blob/main/README_es.md)
+</details>
+
+<details>
+  <summary><h2>🎮 Cómo Manipular el Juego</h2></summary>
+
+  1. **Modifica el Archivo `index.ts`**: 
+     - Este archivo es el punto de entrada de la aplicación. Puedes agregar nuevas funcionalidades o alterar las existentes.
+     - La función `runBattles` es responsable de gestionar los enfrentamientos. ¡Siéntete libre de adaptarla a tus necesidades!
+
+  2. **Creación de Personajes**:
+     - Utiliza las clases disponibles para crear personajes con diferentes características.
+     - Explora las opciones de raza y arquetipos para personalizar tu personaje.
+
+  3. **Desafíos**:
+     - Experimenta con las batallas PvE y PvP, ajustando los parámetros en la función `runBattles` para crear diferentes escenarios de combate.
+
+</details>
+
+<details>
+  <summary><h2>🔗 Repositorios Relacionados</h2></summary>
+
+  - ⚽ [Typescript FootBall API](https://github.com/SamuelRocha91/trybeFutebolClube/blob/main/README_es.md)
+  - 🗡️ [Trybe Smith](https://github.com/SamuelRocha91/TrybeSmith/blob/main/README_es.md)
+  - 🪧 [Blogs Api](https://github.com/SamuelRocha91/BlogsApi/blob/main/README_es.md)
+
+</details>
