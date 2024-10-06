@@ -53,7 +53,7 @@
   1. استنساخ المستودع:
 
      ```bash
-     git clone <رابط المستودع>
+     git clone git@github.com:SamuelRocha91/trybeAndDragons.git
      cd trybers-and-dragons
      ```
 
